@@ -46,11 +46,10 @@ cacheSolve <- function(x, ...) {
       class(x) != "list"
       || names(x) != c("set", "get", "setinv", "getinv")
       || all( sapply(x,class)=="function" ) != TRUE
-    ) {
+   ) {
     # argument does not contain the functions we expect to use
     stop("Invalid argument; must be a function object of makeCacheMatrix()
   Aborting...")
-    
   }
 
   # see whether the "inv" object in this function object is NULL, if it isn't, return
